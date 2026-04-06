@@ -1,0 +1,446 @@
+
+<style>
+.wrap{font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial; padding:16px; color:#111;}
+.h1{font-size:20px; font-weight:700; margin:0 0 12px 0;}
+.h2{font-size:14px; font-weight:700; margin:18px 0 8px 0;}
+.sub{color:#555; font-size:12px; margin-top:2px;}
+.grid{display:flex; gap:10px; flex-wrap:wrap;}
+.card{background:#f6f7f9; border:1px solid #e6e8ee; border-radius:10px; padding:10px 12px; min-width:150px;}
+.card .k{font-size:11px; color:#666; text-transform:uppercase; letter-spacing:.04em;}
+.card .v{font-size:16px; font-weight:700; margin-top:2px;}
+.tbl{border-collapse:separate; border-spacing:0; width:100%; font-size:12px;}
+.tbl th{position:sticky; top:0; background:#fff; border-bottom:1px solid #e6e8ee; text-align:left; padding:8px;}
+.tbl td{border-bottom:1px solid #f0f1f4; padding:7px 8px; vertical-align:top;}
+.row{display:flex; gap:12px; align-items:flex-start; flex-wrap:wrap;}
+.box{flex:1; min-width:320px; background:#fff; border:1px solid #e6e8ee; border-radius:10px; padding:10px;}
+.small{font-size:12px; color:#444;}
+.pill{display:inline-block; padding:2px 8px; border-radius:999px; background:#eef2ff; border:1px solid #dbe3ff; font-size:11px; color:#2a3a8c;}
+</style>
+<div class='wrap'>
+  <div class='h1'>paste.txt dashboard <span class='pill'>tsv</span></div>
+  <div class='sub'>Quick auto-parse + profiling. If the parse mode looks wrong, tell me what the file represents and I will adjust.</div>
+
+  <div class='h2'>Overview</div>
+  <div class='grid'><div class='card'><div class='k'>Parse mode</div><div class='v'>tsv</div></div><div class='card'><div class='k'>Lines</div><div class='v'>1001</div></div><div class='card'><div class='k'>Characters</div><div class='v'>140763</div></div><div class='card'><div class='k'>Rows</div><div class='v'>1000</div></div><div class='card'><div class='k'>Columns</div><div class='v'>18</div></div></div>
+
+  <div class='row'>
+    <div class='box'>
+      <div class='h2' style='margin-top:0'>Preview (first rows)</div>
+      <table class="dataframe tbl">
+  <thead>
+    <tr style="text-align: right;">
+      <th>s no.</th>
+      <th>Ticket_ID</th>
+      <th>Created_At</th>
+      <th>Category</th>
+      <th>z</th>
+      <th>Priority</th>
+      <th>Product</th>
+      <th>Agent</th>
+      <th>First_Response_Hrs</th>
+      <th>Resolution_Hrs</th>
+      <th>Resolved_At</th>
+      <th>Status</th>
+      <th>CSAT_Score</th>
+      <th>Reopened</th>
+      <th>Month</th>
+      <th>Month_Num</th>
+      <th>Hour</th>
+      <th>Day_of_Week</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>1</td>
+      <td>TKT-00001</td>
+      <td>2024-07-25 14:12:00</td>
+      <td>Refund Request</td>
+      <td>Email</td>
+      <td>Low</td>
+      <td>Tablet</td>
+      <td>Ravi Kumar</td>
+      <td>1.6</td>
+      <td>44.9</td>
+      <td>2024-07-27 11:05:00</td>
+      <td>Closed</td>
+      <td>5</td>
+      <td>No</td>
+      <td>Jul</td>
+      <td>7</td>
+      <td>14</td>
+      <td>Thursday</td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>TKT-00002</td>
+      <td>2024-11-09 17:13:00</td>
+      <td>Technical Issue</td>
+      <td>Chat</td>
+      <td>High</td>
+      <td>Earphones</td>
+      <td>Arjun Singh</td>
+      <td>0.8</td>
+      <td>4.1</td>
+      <td>2024-11-09 21:18:00</td>
+      <td>Resolved</td>
+      <td>4</td>
+      <td>No</td>
+      <td>Nov</td>
+      <td>11</td>
+      <td>17</td>
+      <td>Saturday</td>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td>TKT-00003</td>
+      <td>2024-09-27 18:49:00</td>
+      <td>Billing Issue</td>
+      <td>Phone</td>
+      <td>Low</td>
+      <td>Smartphone</td>
+      <td>Divya Joshi</td>
+      <td>1.6</td>
+      <td>31.8</td>
+      <td>2024-09-29 02:34:00</td>
+      <td>Resolved</td>
+      <td>5</td>
+      <td>No</td>
+      <td>Sep</td>
+      <td>9</td>
+      <td>18</td>
+      <td>Friday</td>
+    </tr>
+    <tr>
+      <td>4</td>
+      <td>TKT-00004</td>
+      <td>2024-08-24 08:22:00</td>
+      <td>Billing Issue</td>
+      <td>Social Media</td>
+      <td>High</td>
+      <td>Speaker</td>
+      <td>Karan Mehta</td>
+      <td>1.5</td>
+      <td>9.4</td>
+      <td>2024-08-24 17:44:00</td>
+      <td>Resolved</td>
+      <td>4</td>
+      <td>No</td>
+      <td>Aug</td>
+      <td>8</td>
+      <td>8</td>
+      <td>Saturday</td>
+    </tr>
+    <tr>
+      <td>5</td>
+      <td>TKT-00005</td>
+      <td>2024-02-26 08:10:00</td>
+      <td>Product Defect</td>
+      <td>WhatsApp</td>
+      <td>Low</td>
+      <td>Laptop</td>
+      <td>Sunita Verma</td>
+      <td>5.4</td>
+      <td>64.6</td>
+      <td>2024-02-29 00:45:00</td>
+      <td>Resolved</td>
+      <td>3</td>
+      <td>No</td>
+      <td>Feb</td>
+      <td>2</td>
+      <td>8</td>
+      <td>Monday</td>
+    </tr>
+    <tr>
+      <td>6</td>
+      <td>TKT-00006</td>
+      <td>2024-01-29 18:13:00</td>
+      <td>Product Defect</td>
+      <td>Phone</td>
+      <td>High</td>
+      <td>Charger</td>
+      <td>Pooja Nair</td>
+      <td>4.6</td>
+      <td>11.5</td>
+      <td>2024-01-30 05:41:00</td>
+      <td>Resolved</td>
+      <td>4</td>
+      <td>No</td>
+      <td>Jan</td>
+      <td>1</td>
+      <td>18</td>
+      <td>Monday</td>
+    </tr>
+    <tr>
+      <td>7</td>
+      <td>TKT-00007</td>
+      <td>2024-11-03 20:47:00</td>
+      <td>Billing Issue</td>
+      <td>WhatsApp</td>
+      <td>Low</td>
+      <td>Earphones</td>
+      <td>Ravi Kumar</td>
+      <td>2.3</td>
+      <td>31.2</td>
+      <td>2024-11-05 03:58:00</td>
+      <td>Closed</td>
+      <td>4</td>
+      <td>No</td>
+      <td>Nov</td>
+      <td>11</td>
+      <td>20</td>
+      <td>Sunday</td>
+    </tr>
+    <tr>
+      <td>8</td>
+      <td>TKT-00008</td>
+      <td>2024-09-12 20:14:00</td>
+      <td>Technical Issue</td>
+      <td>Email</td>
+      <td>High</td>
+      <td>Laptop</td>
+      <td>Pooja Nair</td>
+      <td>2.4</td>
+      <td>17.4</td>
+      <td>2024-09-13 13:39:00</td>
+      <td>Pending</td>
+      <td>2</td>
+      <td>No</td>
+      <td>Sep</td>
+      <td>9</td>
+      <td>20</td>
+      <td>Thursday</td>
+    </tr>
+    <tr>
+      <td>9</td>
+      <td>TKT-00009</td>
+      <td>2024-06-21 20:25:00</td>
+      <td>Product Defect</td>
+      <td>WhatsApp</td>
+      <td>Medium</td>
+      <td>Smartphone</td>
+      <td>Pooja Nair</td>
+      <td>4.1</td>
+      <td>37.6</td>
+      <td>2024-06-23 10:00:00</td>
+      <td>Resolved</td>
+      <td>3</td>
+      <td>No</td>
+      <td>Jun</td>
+      <td>6</td>
+      <td>20</td>
+      <td>Friday</td>
+    </tr>
+    <tr>
+      <td>10</td>
+      <td>TKT-00010</td>
+      <td>2024-11-30 19:19:00</td>
+      <td>Billing Issue</td>
+      <td>Chat</td>
+      <td>Medium</td>
+      <td>Power Bank</td>
+      <td>Arjun Singh</td>
+      <td>2.9</td>
+      <td>16.9</td>
+      <td>2024-12-01 12:10:00</td>
+      <td>Resolved</td>
+      <td>4</td>
+      <td>No</td>
+      <td>Nov</td>
+      <td>11</td>
+      <td>19</td>
+      <td>Saturday</td>
+    </tr>
+    <tr>
+      <td>11</td>
+      <td>TKT-00011</td>
+      <td>2024-05-11 09:32:00</td>
+      <td>Delivery Delay</td>
+      <td>Chat</td>
+      <td>Medium</td>
+      <td>Camera</td>
+      <td>Karan Mehta</td>
+      <td>5.0</td>
+      <td>38.2</td>
+      <td>2024-05-12 23:46:00</td>
+      <td>Closed</td>
+      <td>3</td>
+      <td>No</td>
+      <td>May</td>
+      <td>5</td>
+      <td>9</td>
+      <td>Saturday</td>
+    </tr>
+    <tr>
+      <td>12</td>
+      <td>TKT-00012</td>
+      <td>2024-03-22 12:24:00</td>
+      <td>Account Problem</td>
+      <td>Chat</td>
+      <td>Critical</td>
+      <td>Smart Watch</td>
+      <td>Karan Mehta</td>
+      <td>4.2</td>
+      <td>6.4</td>
+      <td>2024-03-22 18:50:00</td>
+      <td>Resolved</td>
+      <td>3</td>
+      <td>No</td>
+      <td>Mar</td>
+      <td>3</td>
+      <td>12</td>
+      <td>Friday</td>
+    </tr>
+  </tbody>
+</table>
+    </div>
+    <div class='box'>
+      <div class='h2' style='margin-top:0'>Top terms in raw text</div>
+      <table class='tbl'>
+        <thead><tr><th>term</th><th style='text-align:right'>count</th></tr></thead>
+        <tbody><tr><td>resolved</td><td style='text-align:right'>572</td></tr><tr><td>closed</td><td style='text-align:right'>386</td></tr><tr><td>medium</td><td style='text-align:right'>383</td></tr><tr><td>low</td><td style='text-align:right'>322</td></tr><tr><td>issue</td><td style='text-align:right'>292</td></tr><tr><td>phone</td><td style='text-align:right'>281</td></tr><tr><td>chat</td><td style='text-align:right'>269</td></tr><tr><td>email</td><td style='text-align:right'>241</td></tr><tr><td>high</td><td style='text-align:right'>196</td></tr><tr><td>billing</td><td style='text-align:right'>196</td></tr><tr><td>delivery</td><td style='text-align:right'>186</td></tr><tr><td>delay</td><td style='text-align:right'>186</td></tr><tr><td>thursday</td><td style='text-align:right'>160</td></tr><tr><td>whatsapp</td><td style='text-align:right'>156</td></tr><tr><td>tuesday</td><td style='text-align:right'>150</td></tr><tr><td>refund</td><td style='text-align:right'>144</td></tr><tr><td>request</td><td style='text-align:right'>144</td></tr><tr><td>saturday</td><td style='text-align:right'>141</td></tr><tr><td>friday</td><td style='text-align:right'>139</td></tr><tr><td>monday</td><td style='text-align:right'>137</td></tr></tbody>
+      </table>
+      <div class='small' style='margin-top:6px'>This is a simple frequency list (3+ char tokens, basic stopwords removed).</div>
+    </div>
+  </div>
+
+  <div class='h2'>Column profile</div>
+  <div class='box'><table class="dataframe tbl">
+  <thead>
+    <tr style="text-align: right;">
+      <th>column</th>
+      <th>dtype</th>
+      <th>non_null</th>
+      <th>unique</th>
+      <th>sample</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>s no.</td>
+      <td>int64</td>
+      <td>1000</td>
+      <td>1000</td>
+      <td>1 | 2 | 3</td>
+    </tr>
+    <tr>
+      <td>Ticket_ID</td>
+      <td>object</td>
+      <td>1000</td>
+      <td>1000</td>
+      <td>TKT-00001 | TKT-00002 | TKT-00003</td>
+    </tr>
+    <tr>
+      <td>Resolved_At</td>
+      <td>datetime64[ns]</td>
+      <td>1000</td>
+      <td>1000</td>
+      <td>2024-07-27 11:05:00 | 2024-11-09 21:18:00 | 2024-09-29 02:34:00</td>
+    </tr>
+    <tr>
+      <td>Created_At</td>
+      <td>datetime64[ns]</td>
+      <td>1000</td>
+      <td>998</td>
+      <td>2024-07-25 14:12:00 | 2024-11-09 17:13:00 | 2024-09-27 18:49:00</td>
+    </tr>
+    <tr>
+      <td>Resolution_Hrs</td>
+      <td>float64</td>
+      <td>1000</td>
+      <td>483</td>
+      <td>44.9 | 4.1 | 31.8</td>
+    </tr>
+    <tr>
+      <td>First_Response_Hrs</td>
+      <td>float64</td>
+      <td>1000</td>
+      <td>56</td>
+      <td>1.6 | 0.8 | 1.6</td>
+    </tr>
+    <tr>
+      <td>Hour</td>
+      <td>int64</td>
+      <td>1000</td>
+      <td>13</td>
+      <td>14 | 17 | 18</td>
+    </tr>
+    <tr>
+      <td>Month</td>
+      <td>object</td>
+      <td>1000</td>
+      <td>12</td>
+      <td>Jul | Nov | Sep</td>
+    </tr>
+    <tr>
+      <td>Month_Num</td>
+      <td>int64</td>
+      <td>1000</td>
+      <td>12</td>
+      <td>7 | 11 | 9</td>
+    </tr>
+    <tr>
+      <td>Product</td>
+      <td>object</td>
+      <td>1000</td>
+      <td>10</td>
+      <td>Tablet | Earphones | Smartphone</td>
+    </tr>
+    <tr>
+      <td>Agent</td>
+      <td>object</td>
+      <td>1000</td>
+      <td>10</td>
+      <td>Ravi Kumar | Arjun Singh | Divya Joshi</td>
+    </tr>
+    <tr>
+      <td>Category</td>
+      <td>object</td>
+      <td>1000</td>
+      <td>8</td>
+      <td>Refund Request | Technical Issue | Billing Issue</td>
+    </tr>
+    <tr>
+      <td>Day_of_Week</td>
+      <td>object</td>
+      <td>1000</td>
+      <td>7</td>
+      <td>Thursday | Saturday | Friday</td>
+    </tr>
+    <tr>
+      <td>z</td>
+      <td>object</td>
+      <td>1000</td>
+      <td>5</td>
+      <td>Email | Chat | Phone</td>
+    </tr>
+    <tr>
+      <td>CSAT_Score</td>
+      <td>int64</td>
+      <td>1000</td>
+      <td>5</td>
+      <td>5 | 4 | 5</td>
+    </tr>
+    <tr>
+      <td>Priority</td>
+      <td>object</td>
+      <td>1000</td>
+      <td>4</td>
+      <td>Low | High | Low</td>
+    </tr>
+    <tr>
+      <td>Status</td>
+      <td>object</td>
+      <td>1000</td>
+      <td>4</td>
+      <td>Closed | Resolved | Resolved</td>
+    </tr>
+    <tr>
+      <td>Reopened</td>
+      <td>object</td>
+      <td>1000</td>
+      <td>2</td>
+      <td>No | No | No</td>
+    </tr>
+  </tbody>
+</table></div>
+</div>
